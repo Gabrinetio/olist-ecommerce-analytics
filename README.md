@@ -36,7 +36,7 @@ O código espera os seguintes ficheiros CSV (disponíveis no [Kaggle](https://ww
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/SEU_USUARIO/olist-ecommerce-analytics.git](https://github.com/SEU_USUARIO/olist-ecommerce-analytics.git)
+    git clone [https://github.com/Gabrinetio/olist-ecommerce-analytics/olist-ecommerce-analytics.git](https://github.com/Gabrinetio/olist-ecommerce-analytics/olist-ecommerce-analytics.git)
     ```
 2.  Instale as dependências:
     ```bash
