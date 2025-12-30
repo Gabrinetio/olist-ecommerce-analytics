@@ -13,12 +13,13 @@ O projeto foi desenvolvido em **Python 3** utilizando as seguintes bibliotecas p
 
 * [Pandas](https://pandas.pydata.org/) - Limpeza, fusão (`merge`) e manipulação de DataFrames.
 * [Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/) - Criação de gráficos estáticos para análise visual.
+* [Jupyter Notebook](https://jupyter.org/) - Ambiente de desenvolvimento interativo.
 
 ## 📂 Estrutura do Projeto
 
 ### 1. Notebook Principal
 * `Analise_Vendas_Olist.ipynb`: Contém todo o código de carregamento, limpeza e visualização. O fluxo de trabalho inclui:
-    * Conexão ao Google Drive para leitura dos dados.
+    * Configuração flexível para leitura de dados (Local ou Google Drive).
     * Conversão de colunas temporais (`datetime`).
     * Tratamento de valores nulos (pedidos não entregues/cancelados).
     * Criação de um dataset unificado (`df_completo`) através da junção de 4 tabelas relacionais.
@@ -30,29 +31,66 @@ O código espera os seguintes ficheiros CSV (disponíveis no [Kaggle](https://ww
 * `olist_order_items_dataset.csv`
 * `olist_products_dataset.csv`
 
-> **Nota:** No código atual, os dados são carregados a partir do caminho `/content/drive/MyDrive/...`. Se for executar localmente, altere a variável `caminho_dos_arquivos`.
+## 🚀 Como Executar este Projeto
 
-## 🚀 Como Executar
+Para rodar a análise na sua máquina local, siga os passos abaixo:
 
-1.  Clone este repositório:
-    ```bash
-    git clone [https://github.com/Gabrinetio/olist-ecommerce-analytics/olist-ecommerce-analytics.git](https://github.com/Gabrinetio/olist-ecommerce-analytics/olist-ecommerce-analytics.git)
-    ```
-2.  Instale as dependências:
-    ```bash
-    pip install pandas matplotlib seaborn
-    ```
-3.  Certifique-se de que os ficheiros CSV estão na pasta correta ou ajuste o caminho no notebook.
-4.  Execute o Jupyter Notebook.
+### 1. Clone o repositório
+```bash
+git clone [https://github.com/Gabrinetio/olist-ecommerce-analytics.git](https://github.com/Gabrinetio/olist-ecommerce-analytics.git)
+cd olist-ecommerce-analytics
+
+```
+
+### 2. Configuração dos Dados (Importante!)
+
+Os dados originais não estão incluídos no repositório para economizar espaço. Siga esta estrutura:
+
+1. Baixe o dataset oficial no Kaggle: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+2. Crie uma pasta chamada `data` na raiz do projeto.
+3. Extraia todos os arquivos `.csv` para dentro desta pasta.
+
+A estrutura de arquivos deve ficar assim:
+
+```text
+olist-ecommerce-analytics/
+├── data/                       <-- Pasta criada por você com os CSVs
+│   ├── olist_customers_dataset.csv
+│   └── ...
+├── Analise_Vendas_Olist.ipynb
+├── requirements.txt
+└── README.md
+
+```
+
+### 3. Instalação das Dependências
+
+Instale as bibliotecas necessárias listadas no arquivo `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 4. Executando o Notebook
+
+Abra o arquivo `Analise_Vendas_Olist.ipynb` no seu editor favorito (VS Code, Jupyter Notebook ou Jupyter Lab) e execute as células.
+
+> **Nota:** O notebook está configurado para buscar os arquivos automaticamente na pasta `data/`.
 
 ## 📈 Principais Insights
+
 Com base na análise realizada:
 
 * **Concentração Regional:** O estado de **São Paulo (SP)** concentra mais de **40%** da base de clientes, seguido pelos restantes estados da região Sudeste (RJ, MG). Isso indica uma forte dependência logística nesta região.
 * **Evolução Temporal:** Existe uma tendência de crescimento no volume de pedidos ao longo do período analisado (2016-2018), com picos de vendas visíveis em períodos específicos.
 
 ## ✒️ Autor
-**Gabriel Santana** Data: 09 de setembro de 2025
+
+**Gabriel Santana**
 
 ---
+
 *Este projeto foi desenvolvido para fins educacionais e de portfólio na área de Ciência de Dados.*
+
+```
