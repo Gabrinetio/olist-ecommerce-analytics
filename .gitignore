@@ -1,0 +1,20 @@
+# Ficheiros do Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Ficheiros compilados de Python
+__pycache__/
+*.pyc
+
+# Dados (Geralmente não se sobe datasets grandes para o GitHub)
+data/
+*.csv
+
+# Ficheiros de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações de ambiente virtual
+.env
+venv/
+env/
